@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users',
     'finance',
     'dashboard',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -57,11 +58,11 @@ ROOT_URLCONF = 'finance_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [],   # can stay empty
+        'APP_DIRS': True,   # 🔥 VERY IMPORTANT
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.request',
+                'django.template.context_processors.request',  # 🔥 IMPORTANT
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
